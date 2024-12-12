@@ -1,0 +1,168 @@
+/* Root Variables */
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #f4f4f4;
+  --text-color: #333;
+  --danger-color: #f44336;
+  --font-family: 'Arial', sans-serif;
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+}
+
+/* General Styles */
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+/* Table Container */
+#taskTableContainer {
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+}
+
+/* Tabulator Table */
+.tabulator {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.tabulator .tabulator-row {
+  border-bottom: 1px solid #ddd;
+  transition: background var(--transition-speed);
+}
+
+.tabulator .tabulator-row:hover {
+  background: var(--secondary-color);
+}
+
+.tabulator-cell {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Action Buttons */
+.action-btn {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: var(--border-radius);
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: background var(--transition-speed);
+}
+
+.action-btn.delete {
+  background: var(--danger-color);
+}
+
+.action-btn:hover {
+  opacity: 0.8;
+}
+
+/* Add Task Form */
+#addTaskForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+#addTaskForm input,
+#addTaskForm select {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  transition: border var(--transition-speed);
+}
+
+#addTaskForm input:focus,
+#addTaskForm select:focus {
+  border-color: var(--primary-color);
+}
+
+#addTaskForm button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background var(--transition-speed);
+}
+
+#addTaskForm button:hover {
+  background: darkgreen;
+}
+
+/* Task Counter */
+#taskCounters {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  padding: 10px;
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.counter-box {
+  text-align: center;
+}
+
+.counter-box h3 {
+  margin: 5px 0;
+  color: var(--primary-color);
+}
+
+/* Search Bar */
+#searchInput {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 16px;
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  transition: border var(--transition-speed);
+}
+
+#searchInput:focus {
+  border-color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #addTaskForm {
+    flex-direction: column;
+  }
+
+  #addTaskForm input,
+  #addTaskForm select,
+  #addTaskForm button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #searchInput {
+    width: 90%;
+  }
+}

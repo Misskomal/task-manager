@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task List Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Tabulator CSS -->
+<link href="https://unpkg.com/tabulator-tables/dist/css/tabulator.min.css" rel="stylesheet">
+<!-- Tabulator JS -->
+<script src="https://unpkg.com/tabulator-tables/dist/js/tabulator.min.js"></script>
+<!-- Toastify CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<!-- Toastify JS -->
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <h1>Task List Manager</h1>
+        <div>
+          <button id="addTaskBtn">Add New Task</button>
+          <select id="filterDropdown">
+            <option value="">Filter by Status</option>
+            <option value="To Do">To Do</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Done">Done</option>
+          </select>
+          <input type="text" id="searchBar" placeholder="Search by Title or Description">
+        </div>
+      
+        <div id="taskCounters">
+          <p>Total Tasks: <span id="totalTasks">0</span></p>
+          <p>To Do: <span id="todoCount">0</span></p>
+          <p>In Progress: <span id="inProgressCount">0</span></p>
+          <p>Done: <span id="doneCount">0</span></p>
+        </div>
+
+      
+        <div id="taskTable"></div>
+      </div>
+      
+
+  <script src="script.js"></script>
+</body>
+</html>
